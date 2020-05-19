@@ -1,0 +1,59 @@
+@import "reset.css";
+#egn-text{
+    text-align: center;
+    margin: 40px;
+    font-size: 35px;
+    font-family: "San Francisco",sans-serif;
+    text-shadow: -1px 0 white, 0px 1px white, 2px 0 lightgreen, 0 -1px yellowgreen;
+}
+#form-box{
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 70px;
+    padding: 70px;
+    font-size: 22px;
+    font-family: Consolas,sans-serif;
+    box-shadow: 5px 5px #9eada3;
+}
+.input-field{
+    padding:10px;
+    text-align: center;
+}
+.input-field input[type=text]{
+    width: 70%;
+    height: 40px;
+}
+.buttons{
+    border: 1px solid silver;
+    display: inline-block;
+    width: 45%;
+    height: 40px;
+    margin-top: 10px;
+}
+#button-frame{
+    text-align: center  ;
+}
+input[type=submit]{
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background-color: #01bfa5;
+}
+button {
+    color: #01bfa5;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+input[type=submit]:hover{
+
+    color: #ffffff;
+    background-color: #55d985;
+}
+
+button:hover{
+    color: #ffffff;
+    background-color: #55d985;
+}

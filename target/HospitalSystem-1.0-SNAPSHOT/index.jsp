@@ -1,16 +1,15 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: A
-  Date: 18.5.2020 г.
-  Time: 21:41
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" type="text/css" href="style/home.css">
+    <link rel="stylesheet" type="text/css" href="style/header.css">
 </head>
 <body>
-Hello world :D
+<%@include file="static/not_logged.html"%>
+<main id="main">
+    <h1 id="welcome-message">Welcome to Modern New City Hospital Official Web Page </h1>
+</main>
 </body>
 </html>
