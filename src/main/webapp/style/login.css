@@ -1,4 +1,9 @@
 @import "reset.css";
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
 #form-box{
     border: 1px solid black;
     margin-top: 70px;

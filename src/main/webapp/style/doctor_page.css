@@ -1,0 +1,99 @@
+@import "reset.css";
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+#form-box {
+    border: 1px solid black;
+    margin-top: 70px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 70px;
+    padding: 20px;
+    font-size: 22px;
+    font-family: "San Francisco", sans-serif;
+    box-shadow: 5px 5px #9eada3;
+}
+
+.doctor-attribute {
+    padding: 10px;
+
+}
+
+.attribute-name {
+    display: inline-block;
+    color: #01bfa5;
+    font-weight: bold;
+}
+
+.attribute-value {
+    color: #01bfa5;
+}
+
+#name {
+    margin-left: 90px;
+    display: inline-block;
+}
+
+#ward {
+    margin-left: 12px;
+    display: inline-block;
+}
+
+#speciality {
+    margin-left: 45px;
+    display: inline-block;
+}
+
+#age {
+    margin-left: 110px;
+    display: inline-block;
+}
+
+#about {
+
+    margin: 10px 10px;
+    padding-bottom: 10px;
+    text-indent: 60px;
+}
+
+
+#buttons {
+    display: inline-block;
+    padding: 10px;
+    margin-left: 140px;
+
+}
+
+#button1 {
+    display: inline-block;
+
+}
+
+#button1 input[type=submit] {
+    border-radius: 5px;
+    background-color: #01bfa5;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#button2{
+    margin-left: 20px;
+    display: inline-block;
+
+}
+#button2 input[type=submit]{
+    color: #01bfa5;
+    padding: 10px;
+    border-radius: 5px;
+}
+#button2 input[type=submit]:hover{
+    color: #ffffff;
+    background-color: #55d985;
+}
+#button1 input[type=submit]:hover {
+    background-color: #55d985;
+}

@@ -10,7 +10,7 @@
 <%@include file="static/not_logged.html"%>
 <h1 id="egn-text">Write Unique Person Identifier-EGN</h1>
 <div id="form-box">
-    <form>
+    <form action="medical_record_info" method="POST">
         <div class="input-field">
             <input type="text" name="egn" placeholder="EGN">
         </div>

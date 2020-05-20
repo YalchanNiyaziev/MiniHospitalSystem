@@ -14,11 +14,17 @@ public class ListDoctorsServiceImpl implements ListDoctorsService {
     public List<ListDoctorsModel> getAllDoctors() {
         List<ListDoctorsModel> list = new ArrayList<>();
         ListDoctorsModel model1 = new ListDoctorsModel();
-        model1.setId(1);
+        ListDoctorsModel model2 = new ListDoctorsModel();
+        model1.setId(9998);
         model1.setName("ivan Petrov");
         model1.setMedicalWard("Ortopedi");
         model1.setSpeciality("Knee");
+        model2.setId(2222);
+        model2.setName("Natsha Marinkova");
+        model2.setMedicalWard("Hirurgiya");
+        model2.setSpeciality("Heart");
         list.add(model1);
+        list.add(model2);
         return list;
     }
 }

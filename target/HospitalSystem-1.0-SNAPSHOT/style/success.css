@@ -1,0 +1,27 @@
+@import "reset.css";
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+#form-box {
+    border: 1px solid black;
+    margin-top: 70px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 70px;
+    padding: 50px;
+    font-size: 50px;
+    font-family: "San Francisco", sans-serif;
+    box-shadow: 5px 5px #9eada3;
+    text-align: center;
+    color: #01bfa5;
+}
+#button input[type=submit]{
+    background-color: #01bfa5;
+    color: #ffffff;
+    margin-top: 40px;
+    border-radius: 8px;
+    font-size: 35px;
+    padding: 15px;
+}

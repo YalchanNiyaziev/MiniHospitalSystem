@@ -1,1 +1,61 @@
 @import "reset.css";
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+#table-frame{
+    border: 1px solid black;
+    margin: 70px 80px;
+    font-family: "San Francisco",sans-serif;
+    box-shadow: 5px 5px #9eada3;
+}
+#table_title{
+    font-size: 40px;
+    text-align: center;
+    margin: 10px;
+    color: #01bfa5;
+    text-shadow: -1px 0 white, 0 1px white, 2px 0 lightgreen, 0 -1px yellowgreen;
+
+}
+#table-div{
+    margin: 3% 8%;
+    padding: 10px;
+
+}
+
+table{
+
+    text-align: left;
+    width: 100%;
+    height: 100%;
+
+}
+.table-cell {
+    border: 1px solid #01bfa5;
+
+    padding: 15px 10px;
+
+    font-weight: bold;
+}
+tr .elem{
+    text-shadow: -1px 0 #01bfa5, 0   1px #01bfa5, 2px 0 #01bfa5, 0 -1px #01bfa5;
+    color: #ffffff;
+}
+.table-cell a{
+
+    color: white;
+    font-size: 21px;
+}
+.table-cell a:hover{
+    text-shadow: -1px 0 #ffffff, 0 1px #ffffff, 2px 0 #ffffff, 0 -1px #ffffff;
+
+    color: #01bfa5;
+}
+.head{
+    font-weight: bold;
+    color: #01bfa5;
+    font-size: 22px;
+}
