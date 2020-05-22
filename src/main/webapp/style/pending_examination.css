@@ -6,9 +6,8 @@
     src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
 
-
 #form-box{
-    border: 1px solid black;
+    border: 1px solid #01bfa5;
     margin-left: 25%;
     margin-right: 25%;
     margin-bottom: 90px;
@@ -28,22 +27,23 @@
     font-family: "San Francisco",sans-serif;
 }
 #inner-box{
-    text-align: center;
+    text-align: left;
     margin-bottom: 0;
+    margin-left: 50px;
 }
+
 .input-field{
     padding:10px;
 }
-.input-field input[type=text],.input-field select,.input-field input[type=email],.input-field input[type=date]{
-    width: 70%;
-    height: 40px;
+.p{
+    display: inline-block;
 }
 
 #name-field{
     margin-left: 35px;
 }
 #address-field{
-    color: #01bfa5;
+
 }
 #street-field{
     margin-left: 13px;
@@ -58,6 +58,7 @@
 #email-field{
     margin-left: 25px;
 }
+
 .buttons{
     border: 1px solid silver;
     display: inline-block;

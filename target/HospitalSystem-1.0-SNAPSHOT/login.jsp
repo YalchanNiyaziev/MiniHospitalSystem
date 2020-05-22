@@ -10,7 +10,7 @@
 <body>
 <%@include file="static/not_logged.html"%>
 <div id="form-box">
-    <form>
+    <form action="login" method="POST">
         <div class="input-field">
             <label>Username: </label>
             <input type="text" name="username" placeholder="Username">

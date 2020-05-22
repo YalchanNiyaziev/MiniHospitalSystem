@@ -5,14 +5,18 @@
     src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
 }
 #egn-text{
+    color: #01bfa5;
     text-align: center;
     margin: 40px;
     font-size: 35px;
     font-family: "San Francisco",sans-serif;
-    text-shadow: -1px 0 white, 0px 1px white, 2px 0 lightgreen, 0 -1px yellowgreen;
+}
+::placeholder{
+    color: #01bfa5;
 }
 #form-box{
-    border: 1px solid black;
+
+    border: 1px solid #01bfa5;
     margin-top: 20px;
     margin-left: 25%;
     margin-right: 25%;
@@ -25,10 +29,13 @@
 .input-field{
     padding:10px;
     text-align: center;
+
 }
 .input-field input[type=text]{
     width: 70%;
     height: 40px;
+    color: #01bfa5;
+    border: 1px solid #01bfa5;
 }
 .buttons{
     border: 1px solid silver;

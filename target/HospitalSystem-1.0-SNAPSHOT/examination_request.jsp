@@ -9,7 +9,7 @@
 <html>
 <head>
     <title>Examination</title>
-    <link rel="stylesheet" type="text/css" href="style/examination_request.css">
+    <link rel="stylesheet" type="text/css" href="style/register.css">
     <link rel="stylesheet" type="text/css" href="style/header.css">
 </head>
 <body>
@@ -62,6 +62,10 @@
             <div class="input-field">
                 <label>Date:</label>
                 <input type="date" name="date" id="date-field">
+            </div>
+            <div class="input-field">
+                <label>Time:</label>
+                <input type="time" name="time" id="time-field">
             </div>
             <div class="input-field">
                 <label>Phone:</label>

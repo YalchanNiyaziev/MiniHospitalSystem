@@ -1,0 +1,159 @@
+@import "reset.css";
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+
+#form-box{
+    border: 1px solid #01bfa5;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 90px;
+    padding: 20px;
+    font-size: 22px;
+    color: #01bfa5;
+    font-weight: bold;
+    font-family: Consolas,sans-serif;
+    box-shadow: 5px 5px #9eada3;
+}
+#title{
+    text-align: center;
+    color: #01bfa5;
+    font-weight: bold;
+    margin: 30px;
+    font-size: 35px;
+    font-family: "San Francisco",sans-serif;
+}
+#inner-box{
+    text-align: center;
+    margin-bottom: 0;
+}
+.input-field{
+    padding:10px;
+}
+.input-field input[type=text],
+.input-field select,
+.input-field input[type=email],
+.input-field input[type=password],
+.input-field input[type=date],
+.input-field input[type=time],
+.input-field input[type=datetime-local],
+.input-field textarea{
+    width: 70%;
+    height: 40px;
+    color: #01bfa5;
+
+}
+
+#name-field{
+    margin-left: 35px;
+}
+#age-field{
+    margin-left: 50px;
+}
+#egn-field{
+    margin-left: 50px;
+}
+#ward-field{
+    margin-left: 38px;
+}
+#speciality-field{
+
+}
+#spec-label{
+    padding-right: 35px;
+}
+#role-field{
+    margin-left: 40px;
+}
+#address-field{
+    color: #01bfa5;
+}
+#street-field{
+    margin-left: 13px;
+}
+#date-field{
+    margin-left: 36px;
+    color: #01bfa5;
+}
+#time-field{
+    margin-left: 36px;
+}
+#disease-box{
+    text-align: left;
+    margin-left: 48px;
+}
+#disease-field {
+    height: 80px;
+    width: 490px;
+
+}
+#opinion-box{
+    text-align: left;
+    margin-left: 48px;
+}
+#medical_opinion-field{
+    height: 80px;
+    width: 490px;
+
+}
+#phone-field{
+    margin-left: 25px;
+}
+#email-field{
+    margin-left: 25px;
+}
+#password-field{
+    margin-right: 10px;
+}
+#conf-password-field{
+    margin-right: 15px;
+}
+#conf-pass-label{
+    word-wrap: break-word;
+    width: 110px;
+    display: inline-block;
+}
+#password-field-a{
+    margin-left: 10px;
+    margin-right: 300px;
+    color: darkgreen;
+}
+.input-field #psw a:hover{
+    color: #01bfa5;
+}
+.buttons{
+    border: 1px solid silver;
+    display: inline-block;
+    width: 45%;
+    height: 40px;
+    margin-top: 10px;
+}
+#button-frame{
+    text-align: center  ;
+}
+input[type=submit]{
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    background-color: #01bfa5;
+}
+button {
+    color: #01bfa5;
+    background-color: #ffffff;
+    width: 100%;
+    height: 100%;
+}
+input[type=submit]:hover{
+
+    color: #ffffff;
+    background-color: #55d985;
+}
+
+button:hover{
+    color: #ffffff;
+    background-color: #55d985;
+}

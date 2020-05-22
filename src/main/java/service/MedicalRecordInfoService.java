@@ -2,6 +2,8 @@ package service;
 
 import controller.model.MedicalRecordInfoModel;
 
+import java.util.List;
+
 public interface MedicalRecordInfoService {
-    MedicalRecordInfoModel findPatientByEgn( String egn);
+    List<MedicalRecordInfoModel> findPatientByEgn(String egn);
 }

@@ -1,0 +1,146 @@
+@import "reset.css";
+
+@font-face {
+    font-family: "San Francisco";
+    font-weight: 400;
+    src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff");
+}
+
+#frame-box{
+
+
+    font-family: "San Francisco",sans-serif;
+    margin: 40px 70px;
+    border: 1px solid #01bfa5;
+    box-shadow: 5px 5px #9eada3;
+    height: 700px;
+}
+#header-frame{
+    margin: 10px;
+    text-align: center;
+
+}
+#welcome-message-frame
+{
+    display: inline-block;
+    font-size: 60px;
+    color: #01bfa5;
+    text-shadow: -1px 0 white, 0px 1px white, 2px 0 lightgreen, 0 -1px yellowgreen;
+    margin: 20px;
+}
+#body-frame{
+    height: 600px;
+    margin: 10px;
+    display: flex;
+    padding: 10px;
+
+}
+#button-box{
+
+    width: 450px;
+    display: table;
+    padding: 20px;
+}
+
+#schedule-box{
+    width: 1000px;
+    height: 600px;
+    margin-left: 30px;
+    display: table;
+}
+
+.button{
+    margin-top: 40px;
+
+
+}
+.button  form{
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+.button  form input[type=submit]{
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid #01bfa5;
+    height: 60px;
+    width: 60%;
+    background-color: #01bfa5;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.button  form input[type=submit]:hover{
+    background-color: #ffffff;
+    color: #01bfa5;
+}
+
+#schedule-box h1{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold ;
+    color: #01bfa5;
+    margin: 10px;
+}
+#schedule{
+    border: 2px solid #01bfa5;
+    margin: 0 10px ;
+    height: 500px;
+}
+#month-year{
+    background-color: #01bfa5;
+    color: #ffffff;
+    height: 90px;
+    margin-bottom: 1px;
+}
+#month-name, #year-name{
+    text-align: center;
+    font-size: 27px;
+    padding: 7px;
+}
+
+.hours{
+    background-color: #01bfa5;
+    color: #ffffff;
+    border: 2px solid #FFFFFF;
+    width: 100px;
+    height: 40px;
+
+    text-align: center;
+}
+
+#table{
+
+    table-layout: fixed;
+    border-collapse: collapse;
+    height: 100%;
+    width: 100%;
+}
+
+#table tbody{
+    display:block;
+    width: 100%;
+    overflow: auto;
+    height: 400px;
+    color: #01bfa5;
+    font-weight: bold;
+
+}
+
+.month-day .task{
+    text-align: center;
+    font-size: 18px;
+    border: 2px solid #01bfa5;
+    width: 100px;
+    height: 40px;
+}
+.row-num{
+    text-align: center;
+
+    width: 40px;
+    height: 40px;
+    border: 2px solid #01bfa5;
+
+}
+
+
