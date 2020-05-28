@@ -60,6 +60,10 @@
                 <input type="text" name="street" id="street-field">
             </div>
             <div class="input-field">
+                <label>Number:</label>
+                <input type="text" name="number" id="street-number-field">
+            </div>
+            <div class="input-field">
                 <label>Date:</label>
                 <input type="date" name="date" id="date-field">
             </div>
@@ -75,7 +79,7 @@
                 <label>Email:</label>
                 <input type="email" name="email" id="email-field">
             </div>
-            <input type="hidden" name="doctor_id" value=<%=request.getParameter("id")%>>
+            <input type="hidden" name="doctor_id" value=<%=request.getParameter("doctorId")%>>
         </div>
         <div id="button-frame">
             <div class="buttons">

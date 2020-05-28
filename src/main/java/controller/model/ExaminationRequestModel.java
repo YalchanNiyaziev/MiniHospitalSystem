@@ -2,83 +2,103 @@ package controller.model;
 
 public class ExaminationRequestModel {
 
-    private String patientName;
-    private String patientCity;
-    private String patientStreet;
-    private int doctorId;
-    private String dateExamination;
-    private String patientPhone;
-    private String patientEmail;
+    private String name;
+    private String city;
+    private String street;
+    private int streetNum;
+    private long doctorId;
+    private String date;
+    private String time;
+    private String phone;
+    private String email;
 
     public ExaminationRequestModel() {
     }
 
-    public String getPatientName() {
-        return patientName;
+    public String getName() {
+        return name;
     }
 
-    public void setPatientName(String patientName) {
-        this.patientName = patientName;
+    public void setName(String patientName) {
+        this.name = patientName;
     }
 
-    public String getPatientCity() {
-        return patientCity;
+    public String getCity() {
+        return city;
     }
 
-    public void setPatientCity(String patientCity) {
-        this.patientCity = patientCity;
+    public void setCity(String patientCity) {
+        this.city = patientCity;
     }
 
-    public String getPatientStreet() {
-        return patientStreet;
+    public String getStreet() {
+        return street;
     }
 
-    public void setPatientStreet(String patientStreet) {
-        this.patientStreet = patientStreet;
+    public void setStreet(String patientStreet) {
+        this.street = patientStreet;
     }
 
-    public int getDoctorId() {
+    public long getDoctorId() {
         return doctorId;
     }
 
-    public void setDoctorId(int doctorId) {
+    public void setDoctorId(long doctorId) {
         this.doctorId = doctorId;
     }
 
-    public String getDateExamination() {
-        return dateExamination;
+    public String getDate() {
+        return date;
     }
 
-    public void setDateExamination(String dateExamination) {
-        this.dateExamination = dateExamination;
+    public void setDate(String dateExamination) {
+        this.date = dateExamination;
     }
 
-    public String getPatientPhone() {
-        return patientPhone;
+    public String getTime() {
+        return time;
     }
 
-    public void setPatientPhone(String patientPhone) {
-        this.patientPhone = patientPhone;
+    public void setTime(String time) {
+        this.time = time;
     }
 
-    public String getPatientEmail() {
-        return patientEmail;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setPatientEmail(String patientEmail) {
-        this.patientEmail = patientEmail;
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public int getStreetNum() {
+        return streetNum;
     }
 
     @Override
     public String toString() {
         return "ExaminationRequestModel{" +
-                "patientName='" + patientName + '\'' +
-                ", patientCity='" + patientCity + '\'' +
-                ", patientStreet='" + patientStreet + '\'' +
+                "name='" + name + '\'' +
+                ", city='" + city + '\'' +
+                ", street='" + street + '\'' +
+                ", streetNum=" + streetNum +
                 ", doctorId=" + doctorId +
-                ", dateExamination='" + dateExamination + '\'' +
-                ", patientPhone='" + patientPhone + '\'' +
-                ", patientEmail='" + patientEmail + '\'' +
+                ", date='" + date + '\'' +
+                ", time='" + time + '\'' +
+                ", phone='" + phone + '\'' +
+                ", email='" + email + '\'' +
                 '}';
+    }
+
+    public void setStreetNum(int streetNum) {
+        this.streetNum = streetNum;
     }
 }

@@ -20,7 +20,7 @@
     <div id="buttons">
         <div id="button1">
             <form action="examination_request" method="GET">
-                <input type="hidden" name="id" value=<%=doctorModel.getId()%>>
+                <input type="hidden" name="doctorId" value=<%=doctorModel.getId()%>>
                 <input type="submit" name="submit" value="Make Examination Request">
             </form>
         </div>

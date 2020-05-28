@@ -22,7 +22,7 @@ public class ShowDoctorServlet extends HttpServlet {
 
         int id = Integer.parseInt(req.getParameter("id"));
         RequestDispatcher rd = req.getRequestDispatcher("doctor_page.jsp");
-        req.setAttribute("selected_doctor", showDoctorService.getDoctorBYId(id));
+        req.setAttribute("selected_doctor", showDoctorService.getDoctorById(id));
         rd.forward(req, resp);
 
     }

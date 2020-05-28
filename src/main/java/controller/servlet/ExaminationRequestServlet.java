@@ -17,8 +17,10 @@ public class ExaminationRequestServlet extends HttpServlet {
 
     @Inject
     private ExaminationRequestService examinationRequestService;
+
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+
         RequestDispatcher rd = req.getRequestDispatcher("examination_request.jsp");
         rd.forward(req,resp);
     }
@@ -28,12 +30,14 @@ public class ExaminationRequestServlet extends HttpServlet {
 
         ExaminationRequestModel examinationModel = new ExaminationRequestModel();
         examinationModel.setDoctorId(Integer.parseInt(req.getParameter("doctor_id")));
-        examinationModel.setPatientName(req.getParameter("name"));
-        examinationModel.setPatientCity(req.getParameter("city"));
-        examinationModel.setPatientStreet(req.getParameter("street"));
-        examinationModel.setDateExamination(req.getParameter("date"));
-        examinationModel.setPatientEmail(req.getParameter("email"));
-        examinationModel.setPatientPhone(req.getParameter("phone"));
+        examinationModel.setName(req.getParameter("name"));
+        examinationModel.setCity(req.getParameter("city"));
+        examinationModel.setStreet(req.getParameter("street"));
+        examinationModel.setStreetNum(Integer.parseInt(req.getParameter("number")));
+        examinationModel.setDate(req.getParameter("date"));
+        examinationModel.setTime(req.getParameter("time"));
+        examinationModel.setEmail(req.getParameter("email"));
+        examinationModel.setPhone(req.getParameter("phone"));
         this.examinationRequestService.makeExaminationRequest(examinationModel);
         resp.sendRedirect("success_request_examination.jsp");
     }
