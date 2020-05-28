@@ -1,17 +1,19 @@
 package controller.model;
 
+import model.entity.enums.UserRole;
+
 public class UserModel {
 
-    private String Role;
+    private UserRole role;
 
     public UserModel() {
     }
 
-    public String getRole() {
-        return Role;
+    public UserRole getRole() {
+        return role;
     }
 
-    public void setRole(String role) {
-        Role = role;
+    public void setRole(UserRole role) {
+        this.role = role;
     }
 }

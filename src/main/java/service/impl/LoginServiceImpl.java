@@ -2,22 +2,30 @@ package service.impl;
 
 import controller.model.LoginModel;
 import controller.model.UserModel;
+import model.entity.User;
+import repository.UserRepository;
 import service.LoginService;
+
+import javax.inject.Inject;
 
 public class LoginServiceImpl implements LoginService {
 
-    private boolean validate(String username, String password) {
-        return true;
+    @Inject
+    private UserRepository userRepository;
+
+    private User getUser(String username, String password) {
+        User user = userRepository.getUserByUsernameAndPassword(username, password);
+        return user;
     }
 
     @Override
     public UserModel login(LoginModel loginModel) {
-        if(validate(loginModel.getUsername(),loginModel.getPassword())){
-            UserModel userModel=new UserModel();
-            userModel.setRole("DOCTOR");
+        User user =getUser(loginModel.getUsername(), loginModel.getPassword());
+        if (user != null) {
+            UserModel userModel = new UserModel();
+            userModel.setRole(user.getUserRole());
             return userModel;
-        }
-        else
-        return null;
+        } else
+            return null;
     }
 }

@@ -2,6 +2,7 @@ package controller.servlet;
 
 import controller.model.LoginModel;
 import controller.model.UserModel;
+import model.entity.enums.UserRole;
 import service.LoginService;
 
 import javax.inject.Inject;
@@ -36,13 +37,13 @@ public class LoginServlet extends HttpServlet {
         loginModel.setPassword(password);
         UserModel userModel = loginService.login(loginModel);
         if (userModel != null) {
-            if (userModel.getRole().equals("DOCTOR")) {
+            if (userModel.getRole().equals(UserRole.DOCTOR)) {
                 resp.sendRedirect("doctor_home.jsp");
-            } else if (userModel.getRole().equals("MEDICAL_STAFF")) {
+            } else if (userModel.getRole().equals(UserRole.HEALTH_PROFESSIONAL)) {
                 resp.sendRedirect("medical_staff_home.jsp");
-            } else if (userModel.getRole().equals("MANGER")) {
+            } else if (userModel.getRole().equals(UserRole.ADMINISTRATIVE_STAFF)) {
                 resp.sendRedirect("manager_home.jsp");
-            } else {
+            } else if(userModel.getRole().equals(UserRole.ADMIN)){
                 resp.sendRedirect("admin_home.jsp");
             }
         } else {

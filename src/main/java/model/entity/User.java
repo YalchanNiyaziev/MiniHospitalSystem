@@ -1,5 +1,7 @@
 package model.entity;
 
+import model.entity.enums.UserRole;
+
 import javax.persistence.*;
 
 @Entity
@@ -12,6 +14,10 @@ public abstract class User extends Person {
 
     @Column
     private String password;
+
+    @Column(name = "user_role")
+    @Enumerated(EnumType.STRING)
+    private UserRole userRole;
 
     public User() {
         super();
@@ -26,13 +32,6 @@ public abstract class User extends Person {
         this.username = username;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
 
     public String getPassword() {
         return password;
@@ -41,6 +40,24 @@ public abstract class User extends Person {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public UserRole getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(UserRole userRole) {
+        this.userRole = userRole;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", role=" + userRole +
+                '}';
+    }
+
 
     @Override
     public boolean equals(Object o) {
