@@ -22,8 +22,13 @@ public class ListDoctorsServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         List<ListDoctorsModel> listDoctors=this.listDoctorsService.getAllDoctors();
-        RequestDispatcher rd =req.getRequestDispatcher("list_doctors.jsp");
-        req.setAttribute("doctors",listDoctors);
-        rd.forward(req,resp);
+        if(listDoctors.size()>0) {
+            RequestDispatcher rd = req.getRequestDispatcher("list_doctors.jsp");
+            req.setAttribute("doctors", listDoctors);
+            rd.forward(req, resp);
+        }
+        else {
+
+        }
     }
 }

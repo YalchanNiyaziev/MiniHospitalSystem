@@ -1,30 +1,33 @@
 package service.impl;
 
 import controller.model.ListDoctorsModel;
+import model.entity.Doctor;
+import repository.DoctorRepository;
 import service.ListDoctorsService;
-
-import javax.annotation.ManagedBean;
+import javax.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 
-//@ManagedBean
+
 public class ListDoctorsServiceImpl implements ListDoctorsService {
+
+    @Inject
+    private DoctorRepository doctorRepository;
+
 
     @Override
     public List<ListDoctorsModel> getAllDoctors() {
-        List<ListDoctorsModel> list = new ArrayList<>();
-        ListDoctorsModel model1 = new ListDoctorsModel();
-        ListDoctorsModel model2 = new ListDoctorsModel();
-        model1.setId(9998);
-        model1.setName("ivan Petrov");
-        model1.setMedicalWard("Ortopedi");
-        model1.setSpeciality("Knee");
-        model2.setId(2222);
-        model2.setName("Natsha Marinkova");
-        model2.setMedicalWard("Hirurgiya");
-        model2.setSpeciality("Heart");
-        list.add(model1);
-        list.add(model2);
-        return list;
+        List<ListDoctorsModel> listDoctorsModel = new ArrayList<>();
+        List<Doctor> listDoctor = doctorRepository.getAllDoctor();
+
+        for(Doctor doctor: listDoctor){
+            ListDoctorsModel model = new ListDoctorsModel();
+            model.setName(doctor.getName());
+            model.setMedicalWard(doctor.getMedicalWard().toString());
+            model.setSpeciality(doctor.getSpecialization().toString());
+            model.setId((int)doctor.getId());
+            listDoctorsModel.add(model);
+        }
+        return listDoctorsModel;
     }
 }
