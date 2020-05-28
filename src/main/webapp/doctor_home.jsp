@@ -18,7 +18,8 @@
     <div id="body-frame">
         <div id="button-box">
             <div class="button">
-                <form action="pending_examination" method="GET">
+                <form action="list_examination_request" method="GET">
+                    <input type="hidden" name="id" value="9999999">
                     <input type="submit" value="examination notifications" name="submit">
                 </form>
             </div>
@@ -33,7 +34,7 @@
                 </form>
             </div>
             <div class="button">
-                <form action="register_staff" method="GET">
+                <form action="register_medical_staff" method="GET">
                     <input type="submit" value="register staff" name="submit">
                 </form>
             </div>

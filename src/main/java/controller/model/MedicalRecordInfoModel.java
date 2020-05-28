@@ -1,9 +1,8 @@
 package controller.model;
 
 public class MedicalRecordInfoModel {
-
     private String medicalRecordDescription;
-    private String getMedicalRecordType;
+    private String medicalRecordType;
     private String date;
     private String doctorName;
 
@@ -18,12 +17,12 @@ public class MedicalRecordInfoModel {
         this.medicalRecordDescription = medicalRecordDescription;
     }
 
-    public String getGetMedicalRecordType() {
-        return getMedicalRecordType;
+    public String getMedicalRecordType() {
+        return medicalRecordType;
     }
 
-    public void setGetMedicalRecordType(String getMedicalRecordType) {
-        this.getMedicalRecordType = getMedicalRecordType;
+    public void setMedicalRecordType(String getMedicalRecordType) {
+        this.medicalRecordType = getMedicalRecordType;
     }
 
     public String getDate() {
@@ -46,7 +45,7 @@ public class MedicalRecordInfoModel {
     public String toString() {
         return "MedicalRecordInfoModel{" +
                 "medicalRecordDescription='" + medicalRecordDescription + '\'' +
-                ", getMedicalRecordType='" + getMedicalRecordType + '\'' +
+                ", getMedicalRecordType='" + medicalRecordType + '\'' +
                 ", date='" + date + '\'' +
                 ", doctorName='" + doctorName + '\'' +
                 '}';

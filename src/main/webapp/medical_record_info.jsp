@@ -27,7 +27,7 @@
             <tr>
                 <td class="table-cell elem"><%=i++%></td>
                 <td class="table-cell elem"><%=model.getMedicalRecordDescription()%></td>
-                <td class="table-cell elem"><%=model.getGetMedicalRecordType()%></td>
+                <td class="table-cell elem"><%=model.getMedicalRecordType()%></td>
                 <td class="table-cell elem"><%=model.getDate()%></td>
                 <td class="table-cell elem"><%=model.getDoctorName()%></td>
             </tr>
