@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: A
-  Date: 22.5.2020 г.
-  Time: 17:02
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="controller.model.ExaminationRequestModel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style/pending_examination.css">
 </head>
 <body>
-
+<%ExaminationRequestModel examReqModel = (ExaminationRequestModel) request.getAttribute("examReqModel");%>
 <%@include file="static/logged.html"%>
 
 <h1 id="title">Pending Examination</h1>
@@ -22,41 +16,48 @@
     <div id="inner-box">
         <div class="input-field">
             <label class="label">Name:</label>
-            <p class="p" id="name-field">Ivan Peshev Milushec</p>
+            <p class="p" id="name-field"><%=examReqModel.getName()%></p>
         </div>
         <div class="input-field">
             <label class="label">Address:</label>
-            <p class="p" id="address-field">Varna</p>
+            <p class="p" id="address-field"><%=examReqModel.getCity()%></p>
         </div>
         <div class="input-field">
             <label class="label">Street:</label>
-            <p class="p" id="street-field">Shipka 11</p>
+            <p class="p" id="street-field"><%=examReqModel.getStreet()%> <%=examReqModel.getStreetNum()%></p>
         </div>
         <div class="input-field">
             <label class="label">Date:</label>
-            <p class="p" id="date-field">05.07.2020</p>
+            <p class="p" id="date-field"><%=examReqModel.getDate()%> <%=examReqModel.getTime()%></p>
         </div>
         <div class="input-field">
             <label class="label">Phone:</label>
-            <p class="p" id="phone-field">026352653.5165</p>
+            <p class="p" id="phone-field"><%=examReqModel.getPhone()%></p>
         </div>
         <div class="input-field">
             <label class="label">Email:</label>
-            <p class="p" id="email-field">Some Emao; kjnjsd</p>
+            <p class="p" id="email-field"><%=examReqModel.getEmail()%></p>
         </div>
-        <input type="hidden" name="doctor_id" value="99999">
     </div>
 
-    <form>
+
         <div id="button-frame">
+            <form action="pending_examination" method="POST" class="form">
             <div class="buttons">
+                <input type="hidden" name="examReqId" value="<%=examReqModel.getExamReqId()%>">
+                <input type="hidden" name="status" value="Approve">
                 <input type="submit" value="Approve">
             </div>
-            <div class="buttons">
-                <button type="button">Reject</button>
-            </div>
-        </div>
     </form>
+            <form action="pending_examination" method="POST" class="form">
+            <div class="buttons">
+                <input type="hidden" name="examReqId" value="<%=examReqModel.getExamReqId()%>">
+                <input type="submit" value="Reject">
+                <input type="hidden" name="status" value="Reject">
+            </div>
+            </form>
+        </div>
+
 </div>
 </body>
 </html>

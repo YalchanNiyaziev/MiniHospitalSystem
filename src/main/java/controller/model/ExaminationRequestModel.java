@@ -1,7 +1,7 @@
 package controller.model;
 
 public class ExaminationRequestModel {
-
+    private long examReqId;
     private String name;
     private String city;
     private String street;
@@ -13,6 +13,14 @@ public class ExaminationRequestModel {
     private String email;
 
     public ExaminationRequestModel() {
+    }
+
+    public long getExamReqId() {
+        return examReqId;
+    }
+
+    public void setExamReqId(long examReqId) {
+        this.examReqId = examReqId;
     }
 
     public String getName() {
@@ -86,7 +94,8 @@ public class ExaminationRequestModel {
     @Override
     public String toString() {
         return "ExaminationRequestModel{" +
-                "name='" + name + '\'' +
+                "examReqId=" + examReqId +
+                ", name='" + name + '\'' +
                 ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
                 ", streetNum=" + streetNum +

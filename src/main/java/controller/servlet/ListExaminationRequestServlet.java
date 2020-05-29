@@ -22,10 +22,16 @@ public class ListExaminationRequestServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        long doctorId = Long.parseLong(req.getParameter("id"));
+        long doctorId = Long.parseLong(req.getParameter("doctorId"));
         RequestDispatcher rd = req.getRequestDispatcher("list_examination_request.jsp");
         List<ExaminationRequestListModel> modelList = listExamReqService.getAllExamination(doctorId);
+        if(modelList.size()>0){
         req.setAttribute("examReqList",modelList);
         rd.forward(req,resp);
+        }
+        else {
+
+        }
     }
+
 }

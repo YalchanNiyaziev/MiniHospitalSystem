@@ -24,6 +24,8 @@ public class LoginServiceImpl implements LoginService {
         if (user != null) {
             UserModel userModel = new UserModel();
             userModel.setRole(user.getUserRole());
+            userModel.setName(user.getName());
+            userModel.setId(user.getId());
             return userModel;
         } else
             return null;

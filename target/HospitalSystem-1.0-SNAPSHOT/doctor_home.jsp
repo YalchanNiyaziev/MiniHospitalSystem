@@ -1,3 +1,4 @@
+<%@ page import="controller.model.UserModel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -7,19 +8,20 @@
 
 </head>
 <body>
+<%UserModel user = (UserModel) session.getAttribute("user");%>
 <%@include file="static/logged.html"%>
 <div id="frame-box">
     <div id="header-frame">
 
         <div id="welcome-message-frame">
-            <h1 id="welcome-message">Welcome doctor stamov</h1>
+            <h1 id="welcome-message">Welcome doctor <%=user.getName()%></h1>
         </div>
     </div>
     <div id="body-frame">
         <div id="button-box">
             <div class="button">
                 <form action="list_examination_request" method="GET">
-                    <input type="hidden" name="id" value="9999999">
+                    <input type="hidden" name="doctorId" value="<%=user.getId()%>">
                     <input type="submit" value="examination notifications" name="submit">
                 </form>
             </div>
