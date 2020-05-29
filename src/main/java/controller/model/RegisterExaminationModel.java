@@ -3,13 +3,15 @@ package controller.model;
 public class RegisterExaminationModel {
     private String name;
     private String egn;
+    private int age;
     private String city;
     private String street;
+    private int streetNum;
     private String date;
     private String disease;
     private String opinion;
     private String phone;
-//    private String id;
+    private long idDoctor;
 
     public RegisterExaminationModel() {
     }
@@ -30,6 +32,14 @@ public class RegisterExaminationModel {
         this.egn = egn;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public String getCity() {
         return city;
     }
@@ -44,6 +54,14 @@ public class RegisterExaminationModel {
 
     public void setStreet(String street) {
         this.street = street;
+    }
+
+    public int getStreetNum() {
+        return streetNum;
+    }
+
+    public void setStreetNum(int streetNum) {
+        this.streetNum = streetNum;
     }
 
     public String getDate() {
@@ -78,25 +96,28 @@ public class RegisterExaminationModel {
         this.phone = phone;
     }
 
-//    public String getId() {
-//        return id;
-//    }
-//
-//    public void setId(String id) {
-//        this.id = id;
-//    }
+    public long getIdDoctor() {
+        return idDoctor;
+    }
+
+    public void setIdDoctor(long idDoctor) {
+        this.idDoctor = idDoctor;
+    }
 
     @Override
     public String toString() {
         return "RegisterExaminationModel{" +
                 "name='" + name + '\'' +
                 ", egn='" + egn + '\'' +
+                ", age=" + age +
                 ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
+                ", streetNum=" + streetNum +
                 ", date='" + date + '\'' +
                 ", disease='" + disease + '\'' +
                 ", opinion='" + opinion + '\'' +
                 ", phone='" + phone + '\'' +
+                ", idDoctor=" + idDoctor +
                 '}';
     }
 }

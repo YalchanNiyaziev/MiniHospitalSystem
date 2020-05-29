@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: A
-  Date: 22.5.2020 г.
-  Time: 16:55
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="controller.model.UserModel" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style/register.css">
 </head>
 <body>
+<%UserModel user = (UserModel) session.getAttribute("user");%>
 <%@include file="static/logged.html"%>
 <h1 id="title">Register Medical Examination</h1>
 <div id="form-box">
@@ -21,6 +16,10 @@
             <div class="input-field">
                 <label>Name:</label>
                 <input type="text" name="name" id="name-field">
+            </div>
+            <div class="input-field">
+                <label>Age:</label>
+                <input type="text" name="age" id="age-field">
             </div>
             <div class="input-field">
                 <label>EGN:</label>
@@ -64,6 +63,10 @@
                 <input type="text" name="street" id="street-field">
             </div>
             <div class="input-field">
+                <label>Number:</label>
+                <input type="text" name="number" id="street-number-field">
+            </div>
+            <div class="input-field">
                 <label>Date:</label>
                 <input type="date" name="date" id="date-field">
             </div>
@@ -80,7 +83,7 @@
                 <input type="text" name="phone" id="phone-field">
             </div>
 
-            <!--        <input type="hidden" name="id" value="99999">-->
+              <input type="hidden" name="doctorId" value="<%=user.getId()%>">
 
         </div>
 

@@ -31,18 +31,22 @@ public class RegisterExaminationServlet extends HttpServlet {
         Map<String, String[]> params = req.getParameterMap();
         RegisterExaminationModel registerExaminationModel = createRegisterExaminationModel(params);
         registerExaminationService.registerExamination(registerExaminationModel);
+        resp.sendRedirect("doctor");
     }
 
     private RegisterExaminationModel createRegisterExaminationModel(Map<String, String[]> params) {
         RegisterExaminationModel registerExaminationModel = new RegisterExaminationModel();
-        registerExaminationModel.setName("name");
-        registerExaminationModel.setEgn("egn");
-        registerExaminationModel.setCity("city");
-        registerExaminationModel.setStreet("street");
-        registerExaminationModel.setDate("date");
-        registerExaminationModel.setDisease("disease");
-        registerExaminationModel.setOpinion("opinion");
-        registerExaminationModel.setPhone("phone");
+        registerExaminationModel.setName(params.get("name")[0]);
+        registerExaminationModel.setAge(Integer.parseInt(params.get("age")[0]));
+        registerExaminationModel.setEgn(params.get("egn")[0]);
+        registerExaminationModel.setCity(params.get("city")[0]);
+        registerExaminationModel.setStreet(params.get("street")[0]);
+        registerExaminationModel.setStreetNum(Integer.parseInt(params.get("number")[0]));
+        registerExaminationModel.setDate(params.get("date")[0]);
+        registerExaminationModel.setDisease(params.get("disease")[0]);
+        registerExaminationModel.setOpinion(params.get("opinion")[0]);
+        registerExaminationModel.setPhone(params.get("phone")[0]);
+        registerExaminationModel.setIdDoctor(Long.parseLong(params.get("doctorId")[0]));
         return registerExaminationModel;
     }
 }

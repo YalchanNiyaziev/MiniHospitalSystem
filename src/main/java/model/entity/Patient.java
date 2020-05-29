@@ -11,7 +11,7 @@ public class Patient extends Person{
     private String email;
 
     public Patient() {
-        this.email="some@abv.bg";
+
     }
 
     public String getEmail() {
