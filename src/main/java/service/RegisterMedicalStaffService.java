@@ -4,5 +4,5 @@ import controller.model.RegisterStaffModel;
 
 public interface RegisterMedicalStaffService {
 
-    void register(RegisterStaffModel staffModel);
+    boolean register(RegisterStaffModel staffModel);
 }

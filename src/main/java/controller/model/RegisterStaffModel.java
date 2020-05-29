@@ -1,6 +1,7 @@
 package controller.model;
 
 public class RegisterStaffModel {
+    private String egn;
     private String name;
     private String age;
     private String ward;
@@ -8,12 +9,21 @@ public class RegisterStaffModel {
     private String role;
     private String city;
     private String street;
+    private int streetNum;
     private String email;
     private String password;
     private String confirmPassword;
     private String phone;
 
     public RegisterStaffModel() {
+    }
+
+    public String getEgn() {
+        return egn;
+    }
+
+    public void setEgn(String egn) {
+        this.egn = egn;
     }
 
     public String getName() {
@@ -72,6 +82,14 @@ public class RegisterStaffModel {
         this.street = street;
     }
 
+    public int getStreetNum() {
+        return streetNum;
+    }
+
+    public void setStreetNum(int streetNum) {
+        this.streetNum = streetNum;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -106,14 +124,16 @@ public class RegisterStaffModel {
 
     @Override
     public String toString() {
-        return "RegisterStaffModel{" +
-                "name='" + name + '\'' +
+        return "RegisterMedicalStaffModel{" +
+                "egn='" + egn + '\'' +
+                ", name='" + name + '\'' +
                 ", age='" + age + '\'' +
                 ", ward='" + ward + '\'' +
                 ", speciality='" + speciality + '\'' +
                 ", role='" + role + '\'' +
                 ", city='" + city + '\'' +
                 ", street='" + street + '\'' +
+                ", streetNum=" + streetNum +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", confirmPassword='" + confirmPassword + '\'' +

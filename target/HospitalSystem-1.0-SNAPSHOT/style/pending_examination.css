@@ -75,7 +75,7 @@ input[type=submit]{
     color: #ffffff;
     background-color: #01bfa5;
 }
-button {
+#reject-button {
     color: #01bfa5;
     background-color: #ffffff;
     width: 100%;
@@ -87,10 +87,10 @@ input[type=submit]:hover{
     background-color: #55d985;
 }
 
-button:hover{
+#reject-button:hover{
     color: #ffffff;
     background-color: #55d985;
 }
-.form{
+form{
     display: inline-block;
 }

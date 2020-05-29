@@ -29,18 +29,21 @@ public class RegisterMedicalStaffServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
         Map<String, String[]> parametars = req.getParameterMap();
-        RegisterStaffModel registerStaffModel = createRegisterStaffModel(parametars);
+        RegisterStaffModel registerStaffModel = createRegisterMedicalStaffModel(parametars);
         registerMedicalStaffService.register(registerStaffModel);
+        resp.sendRedirect("doctor");
     }
 
-    private RegisterStaffModel createRegisterStaffModel(Map<String, String[]> params) {
+    private RegisterStaffModel createRegisterMedicalStaffModel(Map<String, String[]> params) {
         RegisterStaffModel registerStaffModel = new RegisterStaffModel();
         registerStaffModel.setName(params.get("name")[0]);
         registerStaffModel.setAge(params.get("age")[0]);
+        registerStaffModel.setEgn(params.get("egn")[0]);
         registerStaffModel.setCity(params.get("city")[0]);
         registerStaffModel.setStreet(params.get("street")[0]);
+        registerStaffModel.setStreetNum(Integer.parseInt(params.get("number")[0]));
         registerStaffModel.setRole(params.get("role")[0]);
-        registerStaffModel.setSpeciality(params.get("speciality")[0]);
+        registerStaffModel.setSpeciality(params.get("specialization")[0]);
         registerStaffModel.setWard(params.get("ward")[0]);
         registerStaffModel.setEmail(params.get("email")[0]);
         registerStaffModel.setPassword(params.get("password")[0]);

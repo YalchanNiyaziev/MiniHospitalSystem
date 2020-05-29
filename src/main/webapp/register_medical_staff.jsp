@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: A
-  Date: 22.5.2020 г.
-  Time: 16:59
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -16,7 +9,7 @@
 <%@include file="static/logged.html"%>
 <h1 id="title">Register Medical Staff</h1>
 <div id="form-box">
-    <form action="register_staff" method="POST">
+    <form action="register_medical_staff" method="POST">
         <div id="inner-box">
             <div class="input-field">
                 <label>Name:</label>
@@ -27,33 +20,83 @@
                 <input type="text" name="age" id="age-field">
             </div>
             <div class="input-field">
+                <label>EGN:</label>
+                <input type="text" name="egn" id="egn-field">
+            </div>
+            <div class="input-field">
                 <label>Ward:</label>
                 <select name="ward" id="ward-field">
-                    <option value="0" disabled selected>Select a medical ward</option>
-                    <option value="Ortopedy">Ortopedy</option>
-                    <option value="Inner disease">Inner disease</option>
-                    <option value="Cardiology">Cardiology</option>
-                    <option value="Nevrology">Nevrology</option>
+                    <option value="0">Allergology</option>
+                    <option value="1">Anesthesiology and resuscitation</option>
+                    <option value="2">Bacteriology and microbiology</option>
+                    <option value="3">Internal diseases</option>
+                    <option value="4">Cardiology</option>
+                    <option value="5">Dental medicine</option>
+                    <option value="6">Department of pediatrics</option>
+                    <option value="7">Dermatology</option>
+                    <option value="8">Ear Nose Throat</option>
+                    <option value="9">Endocrinology</option>
+                    <option value="10">Gastroenterology</option>
+                    <option value="11">General surgery</option>
+                    <option value="12">Gynecology</option>
+                    <option value="13">Hematology</option>
+                    <option value="14">Infectious diseases and clinical microbiology</option>
+                    <option value="15">Neurology</option>
+                    <option value="16">Neurosurgery</option>
+                    <option value="17">Ophthalmology</option>
+                    <option value="18">Orthopedy</option>
+                    <option value="19">Physiotherapy and rehabilitation</option>
+                    <option value="20">Psychiatry</option>
+                    <option value="21">Psychology</option>
+                    <option value="22">Urology</option>
+
                 </select>
             </div>
             <div class="input-field">
                 <label id="spec-label">Spec:</label>
-                <select name="speciality" id="speciality-field">
-                    <option value="0" disabled selected>Select a speciality</option>
-                    <option value="Orto Knee">Orto Knee</option>
-                    <option value="Child Inner disease">Child Inner disease</option>
-                    <option value="Super Cardiology">SUper Cardiology</option>
-                    <option value="Child Nevrology">Child Nevrology</option>
+                <select name="specialization" id="speciality-field">
+                    <option value="0">Anesthesiology and intensive care</option>
+                    <option value="1">Cardiology</option>
+                    <option value="2">Cardiac surgery</option>
+                    <option value="3">Clinical allergology</option>
+                    <option value="4">Clinical hematology</option>
+                    <option value="5">Clinical immunology</option>
+                    <option value="6">Clinical microbiology</option>
+                    <option value="7">Clinical virology</option>
+                    <option value="8">Ear Nose Throat diseases</option>
+                    <option value="9">Endocrinology and metabolic diseases</option>
+                    <option value="10">Emergency medicine</option>
+                    <option value="11">Gastroenterology</option>
+                    <option value="12">General medicine</option>
+                    <option value="13">General and clinical pathology</option>
+                    <option value="14">Infectious diseases</option>
+                    <option value="15">Nephrology</option>
+                    <option value="16">Neurosurgery</option>
+                    <option value="17">Obstetrics and gynecology</option>
+                    <option value="18">Oral pathology</option>
+                    <option value="19">Orthodontics</option>
+                    <option value="20">Orthopedics and traumatology</option>
+                    <option value="21">Pediatric surgery</option>
+                    <option value="22">Periodontology</option>
+                    <option value="23">Physical and rehabilitation medicine</option>
+                    <option value="24">Pneumology and phthisiology</option>
+                    <option value="25">Rheumatology</option>
+                    <option value="26">Psychiatry</option>
+                    <option value="27">Surgery</option>
+                    <option value="28">Virology</option>
+                    <option value="29">Urology</option>
+
                 </select>
             </div>
             <div class="input-field">
                 <label id="role-label">Role:</label>
                 <select name="role" id="role-field">
-                    <option value="0" disabled selected>Select a role</option>
                     <option value="Doctor">Doctor</option>
-                    <option value="Nurse">Nurse</option>
-                    <option value="Midwife">Midwife</option>
-                    <option value="Child Anestialogyst">Anestialogyst</option>
+                    <option value="0">Nurse</option>
+                    <option value="1">Midwife</option>
+                    <option value="2">Physician</option>
+                    <option value="3">Anesthetist</option>
+                    <option value="4">Paramedic</option>
                 </select>
             </div>
             <div class="input-field">
@@ -92,6 +135,10 @@
             <div class="input-field">
                 <label>Street:</label>
                 <input type="text" name="street" id="street-field">
+            </div>
+            <div class="input-field">
+                <label>Number:</label>
+                <input type="text" name="number" id="street-number-field">
             </div>
             <div class="input-field">
                 <label>Email:</label>
