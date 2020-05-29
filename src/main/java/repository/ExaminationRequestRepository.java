@@ -9,4 +9,5 @@ public interface ExaminationRequestRepository {
     void update(ExaminationRequest examinationRequest);
     ExaminationRequest getExaminationReqById(long id);
     List<ExaminationRequest> getExaminationsByDoctor(long doctorId);
+    List<ExaminationRequest> getPendingExaminationsByDoctor(long doctorId);
 }

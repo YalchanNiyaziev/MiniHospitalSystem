@@ -42,14 +42,14 @@
 
 
         <div id="button-frame">
-            <form action="pending_examination" method="POST">
+            <form action="pending_examination" method="POST" class="form">
             <div class="buttons">
                 <input type="hidden" name="examReqId" value="<%=examReqModel.getExamReqId()%>">
                 <input type="hidden" name="status" value="Approve">
                 <input type="submit" value="Approve">
             </div>
     </form>
-            <form action="pending_examination" method="POST">
+            <form action="pending_examination" method="POST" class="form">
             <div class="buttons">
                 <input type="hidden" name="examReqId" value="<%=examReqModel.getExamReqId()%>">
                 <input type="submit" value="Reject">

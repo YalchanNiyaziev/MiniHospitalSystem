@@ -1,6 +1,7 @@
 package repository.impl;
 
 import model.entity.ExaminationRequest;
+import model.entity.enums.StatusType;
 import repository.ExaminationRequestRepository;
 import repository.connection.ConnectionDB;
 
@@ -61,10 +62,38 @@ public class ExaminationRequestRepositoryImpl implements ExaminationRequestRepos
             examinationRequests = query.getResultList();
         }
         catch (NoResultException e){
-            System.out.println("Not found request by doctor id");
+            System.out.println("Not found examination request by doctor id");
         }
         entityManager.close();
 
         return examinationRequests;
+    }
+
+    @Override
+    public List<ExaminationRequest> getPendingExaminationsByDoctor(long doctorId) {
+        List<ExaminationRequest> examinationRequests=null;
+        EntityManager entityManager =ConnectionDB.createEntityManager();
+        CriteriaBuilder builder = entityManager.getCriteriaBuilder();
+        CriteriaQuery criteriaQuery = builder.createQuery();
+        Root examinationRequest = criteriaQuery.from(ExaminationRequest.class);
+        Join doctor = examinationRequest.join("doctor");
+        criteriaQuery.select(examinationRequest);
+        criteriaQuery.where(
+                builder.and(
+                    builder.equal(doctor.get("id"),doctorId),
+                    builder.equal(examinationRequest.get("status"), StatusType.PENDING)
+                           )
+                    );
+        Query query= entityManager.createQuery(criteriaQuery);
+        try {
+            examinationRequests = query.getResultList();
+        }
+        catch (NoResultException e){
+            System.out.println("Not found pending examination request by doctor id");
+        }
+        entityManager.close();
+
+        return examinationRequests;
+
     }
 }

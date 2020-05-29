@@ -52,7 +52,7 @@
             <form action="pending_examination" method="POST" class="form">
             <div class="buttons">
                 <input type="hidden" name="examReqId" value="<%=examReqModel.getExamReqId()%>">
-                <input type="submit" value="Reject">
+                <input type="submit" value="Reject" id="reject-button">
                 <input type="hidden" name="status" value="Reject">
             </div>
             </form>

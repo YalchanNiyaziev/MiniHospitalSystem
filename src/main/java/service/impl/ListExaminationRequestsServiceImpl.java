@@ -17,7 +17,7 @@ public class ListExaminationRequestsServiceImpl implements ListExaminationReques
     @Override
     public List<ExaminationRequestListModel> getAllExamination(long doctorId) {
         List<ExaminationRequestListModel> examinationModelList = new ArrayList<>();
-        List<ExaminationRequest> examinations = examinationRequestRepository.getExaminationsByDoctor(doctorId);
+        List<ExaminationRequest> examinations = examinationRequestRepository.getPendingExaminationsByDoctor(doctorId);
         for(ExaminationRequest er : examinations){
             ExaminationRequestListModel examinationModel = new ExaminationRequestListModel();
             examinationModel.setName(er.getPatient().getName());
