@@ -1,12 +1,17 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Register Staff</title>
+    <title>Register Medical Staff</title>
     <link rel="stylesheet" type="text/css" href="style/header.css">
     <link rel="stylesheet" type="text/css" href="style/register.css">
 </head>
 <body>
-<%@include file="static/logged.html"%>
+<%if (session.getAttribute("admin") == null) {%>
+<%@include file="static/logged.html" %>
+<%
+} else {%>
+<%@include file="static/admin_header.html" %>
+<%}%>
 <h1 id="title">Register Medical Staff</h1>
 <div id="form-box">
     <form action="register_medical_staff" method="POST">

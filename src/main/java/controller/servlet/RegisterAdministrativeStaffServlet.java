@@ -1,6 +1,52 @@
 package controller.servlet;
 
-import javax.servlet.http.HttpServlet;
+import controller.model.RegisterStaffModel;
+import service.RegisterAdministrativeStaffService;
+import service.RegisterMedicalStaffService;
 
+import javax.inject.Inject;
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.Map;
+
+@WebServlet("/register_administrative_staff")
 public class RegisterAdministrativeStaffServlet extends HttpServlet {
+
+    @Inject
+    private RegisterAdministrativeStaffService registerAdministrativeStaffService;
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        RequestDispatcher rd = req.getRequestDispatcher("register_administrative_staff.jsp");
+        rd.forward(req,resp);
+    }
+
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        Map<String, String[]> parametars = req.getParameterMap();
+        RegisterStaffModel registerStaffModel = createRegisterAdministrativeStaffModel(parametars);
+        registerAdministrativeStaffService.register(registerStaffModel);
+        resp.sendRedirect("admin");
+    }
+
+    private RegisterStaffModel createRegisterAdministrativeStaffModel(Map<String, String[]> params) {
+        RegisterStaffModel registerStaffModel = new RegisterStaffModel();
+        registerStaffModel.setName(params.get("name")[0]);
+        registerStaffModel.setAge(params.get("age")[0]);
+        registerStaffModel.setEgn(params.get("egn")[0]);
+        registerStaffModel.setCity(params.get("city")[0]);
+        registerStaffModel.setStreet(params.get("street")[0]);
+        registerStaffModel.setStreetNum(Integer.parseInt(params.get("number")[0]));
+        registerStaffModel.setRole(params.get("role")[0]);
+        registerStaffModel.setEmail(params.get("email")[0]);
+        registerStaffModel.setPassword(params.get("password")[0]);
+        registerStaffModel.setConfirmPassword(params.get("confirmPassword")[0]);
+        registerStaffModel.setPhone(params.get("phone")[0]);
+        return registerStaffModel;
+    }
 }

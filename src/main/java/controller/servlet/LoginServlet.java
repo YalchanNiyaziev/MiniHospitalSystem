@@ -47,7 +47,8 @@ public class LoginServlet extends HttpServlet {
             } else if (userModel.getRole().equals(UserRole.ADMINISTRATIVE_STAFF)) {
                 resp.sendRedirect("manager_home.jsp");
             } else if(userModel.getRole().equals(UserRole.ADMIN)){
-                resp.sendRedirect("admin_home.jsp");
+                session.setAttribute("admin","admin");
+                resp.sendRedirect("admin");
             }
         } else {
 
