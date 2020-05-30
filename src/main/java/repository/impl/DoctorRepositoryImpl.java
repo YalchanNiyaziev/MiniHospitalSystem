@@ -22,6 +22,11 @@ public class DoctorRepositoryImpl implements DoctorRepository {
 
     @Override
     public void update(Doctor doctor) {
+            EntityManager entityManager = ConnectionDB.createEntityManager();
+            entityManager.getTransaction().begin();
+            entityManager.merge(doctor);
+            entityManager.getTransaction().commit();
+            entityManager.close();
 
     }
 
