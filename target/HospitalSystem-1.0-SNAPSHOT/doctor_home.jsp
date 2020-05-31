@@ -31,7 +31,7 @@
                 </form>
             </div>
             <div class="button">
-                <form>
+                <form action="register_operation" method="GET">
                     <input type="submit" value="register operation" name="submit">
                 </form>
             </div>

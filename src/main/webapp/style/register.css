@@ -103,6 +103,23 @@
     width: 490px;
 
 }
+
+#procedure-box{
+    text-align: left;
+    margin-left: 35px;
+}
+#procedure-description-field{
+    height: 80px;
+    width: 490px;
+}
+#conclusion-box{
+    text-align: left;
+    margin-left: 35px;
+}
+#conclusion-field{
+    height: 80px;
+    width: 490px;
+}
 #phone-field{
     margin-left: 25px;
 }

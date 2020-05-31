@@ -12,7 +12,8 @@ public abstract class HealthService extends BaseEntity{
     @Column
     private LocalDate date;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+//    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name="patient_id",referencedColumnName = "id")
     private Patient patient;
 
